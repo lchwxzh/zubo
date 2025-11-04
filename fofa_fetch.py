@@ -388,13 +388,14 @@ def push_all_files():
 # 主执行逻辑
 if __name__ == "__main__":
     run_count = first_stage()
-    if run_count in [24, 48, 72,96,120, 144]:
+    if run_count in [24,48,72,96,120,144]:
         second_stage()
         third_stage()
     push_all_files()
 
 
     
+
 
 
 
