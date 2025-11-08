@@ -353,7 +353,8 @@ def third_stage():
                 valid_lines.append(f"{c},{u}${province_operator}")
 
     beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
-    disclaimer_url ="http://live.njgdmm.com/changzhi/cztv1.m3u8"
+    disclaimer_url ="http://live.njgdmm.com/changzhi/cztv1.m3u8,http://111.53.96.67:8081/live/1/index.m3u8,rtmp://live.njgdmm.com/changzhi/cztv2,http://live.njgdmm.com/changzhi/cztv2.m3u8,http://live.njgdmm.com/changzhi/czetv.m3u8
+,https://f3jok3az.live.sxmty.com/live/hls/ebaa2bf2e7f94dc79d4e642ac76d2415/0d97361a940348729fbd0ee3f4eb9e47.m3u8,http://zhibo.czmarathon.net/cdd/TVLive.m3u8?auth_key=1724143889-0-0-929d4ecd8b7700822ec202b14ebc6c3c,http://60.220.198.84:81/0.m3u8,http://stream.icelook.cn/2daa869d1623782d/6679643898219856900_1602492802.m3u8?auth_key=1893456000-0-0-8c6e3e73d78411a6bd6e2faef2b275d0,http://player4.juyun.tv:80/tv/149466149.m3u8,https://zmjp3jin.live.sxmty.com/live/hls/268fe96f955d496db37fb10bb887cda9/fc196029d289449ea524a94a95379a0d.m3u8 ,http://jwcdnqx.hebyun.com.cn/live/SXTV1/1500k/tzwj_video.m3u8,http://live.jinnews.com.cn/xwzh/sd/live.m3u8#http://live.jinnews.com.cn/xwzh/sd/live.m3u8?zshanxd,http://live.jinnews.com.cn/ggpd/sd/live.m3u8#http://live.jinnews.com.cn/ggpd/sd/live.m3u8?zshanxd"
                     
     with open(IPTV_FILE, "w", encoding="utf-8") as f:
         f.write(f"更新时间: {beijing_now}（北京时间）\n\n")
@@ -395,6 +396,7 @@ if __name__ == "__main__":
 
 
     
+
 
 
 
