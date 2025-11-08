@@ -369,8 +369,7 @@ def third_stage():
 涉县综合频道,http://jwcdnqx.hebyun.com.cn/live/SXTV1/1500k/tzwj_video.m3u8
 晋城综合,http://live.jinnews.com.cn/xwzh/sd/live.m3u8#http://live.jinnews.com.cn/xwzh/sd/live.m3u8?zshanxd
 晋城公共,http://live.jinnews.com.cn/ggpd/sd/live.m3u8#http://live.jinnews.com.cn/ggpd/sd/live.m3u8?zshanxd
-高平综合,http://live.gprmt.cn/gpnews/hd/live.m3u8 
-"
+高平综合,http://live.gprmt.cn/gpnews/hd/live.m3u8 "
 
     with open(IPTV_FILE, "w", encoding="utf-8") as f:
         f.write(f"更新时间: {beijing_now}（北京时间）\n\n")
@@ -412,6 +411,7 @@ if __name__ == "__main__":
 
 
     
+
 
 
 
