@@ -353,7 +353,13 @@ def third_stage():
                 valid_lines.append(f"{c},{u}${province_operator}")
 
     beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
-    disclaimer_url ="http://live.njgdmm.com/changzhi/cztv1"
+    disclaimer_url ="http://live.njgdmm.com/changzhi/cztv1.m3u8,http://live.njgdmm.com/changzhi/cztv2.m3u8,http://live.njgdmm.com/changzhi/czetv.m3u8,https://f3jok3az.live.sxmty.com/live/hls/ebaa2bf2e7f94dc79d4e642ac76d2415/0d97361a9403487
+29fbd0ee3f4eb9e47.m3u8,http://60.220.198.84:81/0.m3u8,https://zmjp3jin.live.sxmty.com/live/hls/268fe96f955d496db37fb10bb887cda9/fc196029d289449ea524a94a95379a0d.m3u8,http://jwcdnqx.hebyun.com.cn/live/SXTV1/1500k/tzwj_v
+ideo.m3u8,http://live.jinnews.com.cn/xwzh/sd/live.m3u8#http://live.jinnews.com.cn/xwzh/sd/live.m3u8?zshanxd,http://live.jinnews.com.cn/ggpd/sd/live.m3u8#http://live.jinnews.com.cn/ggpd/sd/live.m3u8?zshanxd"
+
+
+
+
                     
     with open(IPTV_FILE, "w", encoding="utf-8") as f:
         f.write(f"更新时间: {beijing_now}（北京时间）\n\n")
@@ -395,6 +401,7 @@ if __name__ == "__main__":
 
 
     
+
 
 
 
