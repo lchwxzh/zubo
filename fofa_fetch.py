@@ -353,7 +353,7 @@ def third_stage():
                 valid_lines.append(f"{c},{u}${province_operator}")
 
     beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
-    disclaimer_url ="https://13509.kstore.space/bdpd.txt"
+    disclaimer_url ="http://live.njgdmm.com/changzhi/cztv2"
                     
     with open(IPTV_FILE, "w", encoding="utf-8") as f:
         f.write(f"更新时间: {beijing_now}（北京时间）\n\n")
@@ -395,6 +395,7 @@ if __name__ == "__main__":
 
 
     
+
 
 
 
