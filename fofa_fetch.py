@@ -353,7 +353,7 @@ def third_stage():
                 valid_lines.append(f"{c},{u}${province_operator}")
 
     beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
-    disclaimer_url ="http://live.njgdmm.com/changzhi/cztv1.m3u8,http://live.njgdmm.com/changzhi/cztv2.m3u8,http://live.njgdmm.com/changzhi/czetv.m3u8"
+    disclaimer_url ="http://live.njgdmm.com/changzhi/cztv1.m3u8#http://live.njgdmm.com/changzhi/cztv2.m3u8#http://live.njgdmm.com/changzhi/czetv.m3u8"
 
 
 
@@ -399,6 +399,7 @@ if __name__ == "__main__":
 
 
     
+
 
 
 
