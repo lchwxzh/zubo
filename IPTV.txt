@@ -1,7 +1,7 @@
 更新时间: 2025-11-09 08:26:02（北京时间）
 
 更新时间,#genre#
-2025-11-09 08:26:02,http://live.njgdmm..com/changzhi/cztv2
+2025-11-09 08:26:02,http://live.njgdmm.com/changzhi/cztv2
 
 央视频道,#genre#
 CCTV1,http://123.181.124.27:82/rtp/239.254.200.45:8008$河北省电信
