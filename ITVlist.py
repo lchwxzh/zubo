@@ -7,7 +7,7 @@ import os
 import threading
 from urllib.parse import urljoin
 
-URL_FILE = "https://raw.githubusercontent.com/lchwxzh/zubo/main/ip_urls.txt"
+URL_FILE = "https://raw.githubusercontent.com/kakaxi-1/zubo/main/ip_urls.txt"
 
 CHANNEL_CATEGORIES = {
     "央视频道": [
@@ -30,8 +30,6 @@ CHANNEL_CATEGORIES = {
         "劲爆体育", "快乐垂钓", "茶频道", "先锋乒羽", "天元围棋", "汽摩", "梨园频道", "文物宝库", "武术世界",
         "乐游", "生活时尚", "都市剧场", "欢笑剧场", "游戏风云", "金色学堂", "动漫秀场", "新动漫", "卡酷少儿", "金鹰卡通", "优漫卡通", "哈哈炫动", "嘉佳卡通", 
         "中国交通", "中国天气"
-    "山西频道": [
-        "山西卫视", "山西黄河HD", "山西经济与科技HD", "山西影视HD", "山西社会与法治HD", "山西文体生活HD" 
     ],
 }
 
@@ -120,23 +118,15 @@ CHANNEL_MAPPING = {
     "金鹰卡通": ["湖南金鹰卡通"],
     "中国交通": ["中国交通频道"],
     "中国天气": ["中国天气频道"],
-    "山西卫视": ["山西卫视高清"],
-    "山西黄河HD": ["山西黄河", "黄河电视台高清"],
-    "山西经济与科技HD": ["山西经济与科技", "山西经济与科技高清"],
-    "山西社会与法治HD": ["山西社会与法治", "山西社会与法治高清"],
-    "山西文体生活HD": ["山西文体生活", "山西文体生活高清"],
-    "山西影视HD": ["山西影视", "山西影视高清"]  
-}#格式为"频道分类中的标准名": ["rtp/中的名字"],
-
 }
 
-RESULTS_PER_CHANNEL = 15
+RESULTS_PER_CHANNEL = 20
 
 def load_urls():
     """从 GitHub 下载 IPTV IP 段列表"""
     import requests
     try:
-        resp = requests.get(URL_FILE, timeout=5)
+        resp = requests.get(URL_FILE, timeout=3)
         resp.raise_for_status()
         urls = [line.strip() for line in resp.text.splitlines() if line.strip()]
         print(f"📡 已加载 {len(urls)} 个基础 URL")
@@ -156,13 +146,11 @@ async def generate_urls(url):
     port = url[ip_end:]
 
     json_paths = [
-        "/iptv/live/1000.json?key=txiptv",
-        "/iptv/live/1001.json?key=txiptv",
-        "/iptv/live/2000.json?key=txiptv",
-        "/iptv/live/2001.json?key=txiptv",
-        "/live/1000.json",
-        "/tv/live.json"
-    ]
+    "/iptv/live/1000.json?key=txiptv",
+    "/iptv/live/1001.json?key=txiptv",
+    "/iptv/live/2000.json?key=txiptv",
+    "/iptv/live/2001.json?key=txiptv"
+]
 
     for i in range(1, 256):
         ip = f"{base}{ip_prefix}.{i}{port}"
@@ -174,7 +162,7 @@ async def generate_urls(url):
 async def fetch_json(session, url, semaphore):
     async with semaphore:
         try:
-            async with session.get(url, timeout=0.8) as resp:
+            async with session.get(url, timeout=1) as resp:
                 data = await resp.json()
                 results = []
                 for item in data.get('data', []):
@@ -207,7 +195,7 @@ async def check_url(session, url, semaphore):
 
 async def main():
     print("🚀 开始运行 ITVlist 脚本")
-    semaphore = asyncio.Semaphore(150)
+    semaphore = asyncio.Semaphore(120)
 
     urls = load_urls()
     
@@ -276,7 +264,7 @@ async def main():
         datetime.timezone(datetime.timedelta(hours=8))
     ).strftime("%Y-%m-%d %H:%M:%S")
 
-    disclaimer_url = "http://live.njgdmm.com/changzhi/cztv1.m3u8$长治综合#http://live.njgdmm.com/changzhi/cztv2.m3u8$长治公共#http://live.njgdmm.com/changzhi/czetv.m3u8$长治教育#https://f3jok3az.live.sxmty.com/live/hls/ebaa2bf2e7f94dc79d4e642ac76d2415/0d97361a940348729fbd0ee3f4eb9e47.m3u8$屯留电视台#http://zhibo.czmarathon.net/cdd/TVLive.m3u8?auth_key=1724143889-0-0-929d4ecd8b7700822ec202b14ebc6c3c$上党TV#https://zmjp3jin.live.sxmty.com/live/hls/268fe96f955d496db37fb10bb887cda9/fc196029d289449ea524a94a95379a0d.m3u8$壶关电视台#http://60.220.198.84:81/0.m3u8$武乡电视台#http://player4.juyun.tv:80/tv/149466149.m3u8$平顺电视台#http://jwcdnqx.hebyun.com.cn/live/SXTV1/1500k/tzwj_video.m3u8$涉县综合#http://live.jinnews.com.cn/xwzh/sd/live.m3u8$晋城综合#http://live.jinnews.com.cn/xwzh/sd/live.m3u8?zshanxd$晋城综合#http://live.jinnews.com.cn/ggpd/sd/live.m3u8$晋城文化#http://live.jinnews.com.cn/ggpd/sd/live.m3u8?zshanxd$晋城文化"
+    disclaimer_url = "https://kakaxi-1.asia/LOGO/Disclaimer.mp4"
 
     with open("itvlist.txt", 'w', encoding='utf-8') as f:
         f.write(f"更新时间: {beijing_now}（北京时间）\n\n")
@@ -297,4 +285,6 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
 
