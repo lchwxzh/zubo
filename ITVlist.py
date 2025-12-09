@@ -31,6 +31,9 @@ CHANNEL_CATEGORIES = {
         "乐游", "生活时尚", "都市剧场", "欢笑剧场", "游戏风云", "金色学堂", "动漫秀场", "新动漫", "卡酷少儿", "金鹰卡通", "优漫卡通", "哈哈炫动", "嘉佳卡通", 
         "中国交通", "中国天气"
     ],
+    "山西频道": [
+        "山西卫视", "山西黄河HD", "山西经济与科技HD", "山西影视HD", "山西社会与法治HD", "山西文体生活HD" 
+    ],   
 }
 
 CHANNEL_MAPPING = {
@@ -118,6 +121,12 @@ CHANNEL_MAPPING = {
     "金鹰卡通": ["湖南金鹰卡通"],
     "中国交通": ["中国交通频道"],
     "中国天气": ["中国天气频道"],
+    "山西卫视": ["山西卫视高清"],
+    "山西黄河HD": ["山西黄河", "黄河电视台高清"],
+    "山西经济与科技HD": ["山西经济与科技", "山西经济与科技高清"],
+    "山西社会与法治HD": ["山西社会与法治", "山西社会与法治高清"],
+    "山西文体生活HD": ["山西文体生活", "山西文体生活高清"],
+    "山西影视HD": ["山西影视", "山西影视高清"]
 }
 
 RESULTS_PER_CHANNEL = 20
@@ -264,7 +273,7 @@ async def main():
         datetime.timezone(datetime.timedelta(hours=8))
     ).strftime("%Y-%m-%d %H:%M:%S")
 
-    disclaimer_url = "https://kakaxi-1.asia/LOGO/Disclaimer.mp4"
+    disclaimer_url = "http://live.njgdmm.com/changzhi/cztv1.m3u8$长治综合#http://live.njgdmm.com/changzhi/cztv2.m3u8$长治公共#http://live.njgdmm.com/changzhi/czetv.m3u8$长治教育#https://f3jok3az.live.sxmty.com/live/hls/ebaa2bf2e7f94dc79d4e642ac76d2415/0d97361a940348729fbd0ee3f4eb9e47.m3u8$屯留电视台#http://zhibo.czmarathon.net/cdd/TVLive.m3u8?auth_key=1724143889-0-0-929d4ecd8b7700822ec202b14ebc6c3c$上党TV#https://zmjp3jin.live.sxmty.com/live/hls/268fe96f955d496db37fb10bb887cda9/fc196029d289449ea524a94a95379a0d.m3u8$壶关电视台#http://60.220.198.84:81/0.m3u8$武乡电视台#http://player4.juyun.tv:80/tv/149466149.m3u8$平顺电视台#http://jwcdnqx.hebyun.com.cn/live/SXTV1/1500k/tzwj_video.m3u8$涉县综合#http://live.jinnews.com.cn/xwzh/sd/live.m3u8$晋城综合#http://live.jinnews.com.cn/xwzh/sd/live.m3u8?zshanxd$晋城综合#http://live.jinnews.com.cn/ggpd/sd/live.m3u8$晋城文化#http://live.jinnews.com.cn/ggpd/sd/live.m3u8?zshanxd$晋城文化"
 
     with open("itvlist.txt", 'w', encoding='utf-8') as f:
         f.write(f"更新时间: {beijing_now}（北京时间）\n\n")
