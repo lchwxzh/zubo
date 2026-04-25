@@ -1,7 +1,7 @@
-更新时间: 2026-04-25 17:15:09（北京时间）
+更新时间: 2026-04-26 03:32:43（北京时间）
 
 更新时间,#genre#
-2026-04-25 17:15:09,https://f3jok3az.live.sxmty.com/live/hls/ebaa2bf2e7f94dc79d4e642ac76d2415/0d97361a940348729fbd0ee3f4eb9e47.m3u8$屯留电视台#http://zhibo.czmarathon.net/cdd/TVLive.m3u8?auth_key=1724143889-0-0-929d4ecd8b7700822ec202b14ebc6c3c$上党TV#https://zmjp3jin.live.sxmty.com/live/hls/268fe96f955d496db37fb10bb887cda9/fc196029d289449ea524a94a95379a0d.m3u8$壶关电视台#http://60.220.198.84:81/0.m3u8$武乡电视台#http://player4.juyun.tv:80/tv/149466149.m3u8$平顺电视台#http://jwcdnqx.hebyun.com.cn/live/SXTV1/1500k/tzwj_video.m3u8$涉县综合#http://live.jinnews.com.cn/xwzh/sd/live.m3u8$晋城综合#http://live.jinnews.com.cn/xwzh/sd/live.m3u8?zshanxd$晋城综合#http://live.jinnews.com.cn/ggpd/sd/live.m3u8$晋城文化#http://live.jinnews.com.cn/ggpd/sd/live.m3u8?zshanxd$晋城文化
+2026-04-26 03:32:43,https://f3jok3az.live.sxmty.com/live/hls/ebaa2bf2e7f94dc79d4e642ac76d2415/0d97361a940348729fbd0ee3f4eb9e47.m3u8$屯留电视台#http://zhibo.czmarathon.net/cdd/TVLive.m3u8?auth_key=1724143889-0-0-929d4ecd8b7700822ec202b14ebc6c3c$上党TV#https://zmjp3jin.live.sxmty.com/live/hls/268fe96f955d496db37fb10bb887cda9/fc196029d289449ea524a94a95379a0d.m3u8$壶关电视台#http://60.220.198.84:81/0.m3u8$武乡电视台#http://player4.juyun.tv:80/tv/149466149.m3u8$平顺电视台#http://jwcdnqx.hebyun.com.cn/live/SXTV1/1500k/tzwj_video.m3u8$涉县综合#http://live.jinnews.com.cn/xwzh/sd/live.m3u8$晋城综合#http://live.jinnews.com.cn/xwzh/sd/live.m3u8?zshanxd$晋城综合#http://live.jinnews.com.cn/ggpd/sd/live.m3u8$晋城文化#http://live.jinnews.com.cn/ggpd/sd/live.m3u8?zshanxd$晋城文化
 
 央视频道,#genre#
 CCTV1,http://221.232.40.13:8888/rtp/239.254.96.96:8550$湖北电信
@@ -71,8 +71,8 @@ CCTV17,http://221.232.40.13:8888/rtp/239.69.1.152:10548$湖北电信
 重庆卫视,http://58.62.234.243:10000/rtp/239.77.1.16:5146$广东电信
 贵州卫视,http://221.232.40.13:8888/rtp/239.69.1.150:10536$湖北电信
 贵州卫视,http://58.62.234.243:10000/rtp/239.77.1.61:5146$广东电信
-云南卫视,http://223.10.214.111:6000/rtp/239.1.1.54:8054$山西电信
 云南卫视,http://58.62.234.243:10000/rtp/239.77.1.72:5146$广东电信
+云南卫视,http://223.10.214.111:6000/rtp/239.1.1.54:8054$山西电信
 天津卫视,http://221.232.40.13:8888/rtp/239.69.1.68:10048$湖北电信
 天津卫视,http://58.62.234.243:10000/rtp/239.77.1.37:5146$广东电信
 安徽卫视,http://221.232.40.13:8888/rtp/239.69.1.70:10060$湖北电信
@@ -111,8 +111,8 @@ CCTV17,http://221.232.40.13:8888/rtp/239.69.1.152:10548$湖北电信
 金鹰卡通,http://223.10.214.111:6000/rtp/239.1.1.61:8061$山西电信
 优漫卡通,http://223.10.214.111:6000/rtp/239.1.1.72:8072$山西电信
 哈哈炫动,http://223.10.214.111:6000/rtp/239.1.1.64:8064$山西电信
-嘉佳卡通,http://223.10.214.111:6000/rtp/239.1.1.68:8068$山西电信
 嘉佳卡通,http://58.62.234.243:10000/rtp/239.77.1.15:5146$广东电信
+嘉佳卡通,http://223.10.214.111:6000/rtp/239.1.1.68:8068$山西电信
 中国天气,http://223.10.214.111:6000/rtp/239.1.1.107:8107$山西电信
 
 山西频道,#genre#
